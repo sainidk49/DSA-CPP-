@@ -3,6 +3,7 @@
     "files.associations": {
         "*.embeddedhtml": "html",
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "algorithm": "cpp"
     }
 }
