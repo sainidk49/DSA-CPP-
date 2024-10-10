@@ -3,23 +3,21 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the number of seq: ";
-    cin >> n;
-    char ch = 'A';
-    char lastCh;
-    for (int i = 1; i <= n; ++i)
-    {
-        for (int j = i; j > 0; j--)
-        {
-            cout << ch << " ";
+    // int n;
+    // cout << "Enter the number of seq: ";
+    // cin >> n;
+    // char ch = 'A';
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n - i; j++)
+    //     {
+    //         cout << ch << " ";
+    //     }
+    //     ch++;
+    //     cout << endl;
+    // }
 
-            // ch--;
-            
-        }
-        ch++;
-        cout << endl;
-    }
-
-    return 0;
+   
 }
+
+

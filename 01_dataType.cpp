@@ -68,7 +68,7 @@ int main()
     // cout << (x < y) << endl;  // true (1)
     // cout << (x > y) << endl;  // false (0)
 
-    //// Logical Operator
+    // Logical Operator
     // bool a = true, b = false;
     // cout << (a && b) << endl; // false (0)
     // cout << (a || b) << endl; // true (1)
@@ -81,11 +81,11 @@ int main()
 
     //// Bitwise Operators
     int a = 4, b = 8;
-    // cout << (a & b) << endl;  // AND
+    cout << (a & b) << endl;  // AND
     // cout << (a | b) << endl;  // OR
     // cout << (a ^ b) << endl;  // XOR
     // cout << (a << 1) << endl; // Left shift
-    cout << (a >> 1) << endl; // Right shift
+    // cout << (a >> 1) << endl; // Right shift
     // cout << (~a) << endl;     // NOT
 
     return 0;

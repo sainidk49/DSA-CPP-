@@ -1,4 +1,11 @@
-========== Memory Sizes ======================
+**======  #include <iostream> // preprocessor directive ==========**
+
+**======  using namespace std; ==========**
+using namespace std; library for cout and cin 
+alternative :- std::cout<<"hello world"
+
+
+**========== Memory Sizes ======================**
 
 => 1TB = 1024GB
 => 1GB = 1024MB
@@ -7,7 +14,7 @@
 => 1byte = 8bit
 
 
-========== DataTypes and bytes ===============
+**========== DataTypes and bytes ===============**
 
 => char = 1 byte
 => bool = 1 byte
@@ -15,7 +22,7 @@
 => float = 4 byte
 => double = 8 byte
 
-========== decimal to binary conversion ===============
+**========== decimal to binary conversion ===============**
 
  suppos number is 52
  52/2 = 26 => 0
@@ -35,7 +42,7 @@
  binary is = 11011
 
 
- ========== Binary Numbers ===============
+ **========== Binary Numbers ===============**
 
  0 => 00
  1 => 01
@@ -48,3 +55,7 @@
  8 => 1000
  9 => 1001
  10 => 1010
+
+ **========= A start with 65 and a start with 97 ============**
+ A - Z => 65 - 90;
+ a => 97
