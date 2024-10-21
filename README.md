@@ -41,6 +41,13 @@ alternative :- std::cout<<"hello world"
  3/2 = 1 
  binary is = 11011
 
+**========== binary to decimal conversion =============**
+
+11011 => 1*2p4 + 1*2p3 + 0*2p2 + 1*2p1 + 1*2p0
+      => 1*16  + 1*8   + 0*4   + 1*2   + 1*1
+      => 16    + 8     + 0     + 2     +1
+      => 27
+
 
  **========== Binary Numbers ===============**
 
@@ -58,4 +65,4 @@ alternative :- std::cout<<"hello world"
 
  **========= A start with 65 and a start with 97 ============**
  A - Z => 65 - 90;
- a => 97
+ a => 97 - 122
