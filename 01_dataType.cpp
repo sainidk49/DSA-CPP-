@@ -80,12 +80,16 @@ int main()
     // cout << "Max: " << max << endl;
 
     //// Bitwise Operators
-    int a = 4, b = 8;
-    cout << (a & b) << endl;  // AND
-    // cout << (a | b) << endl;  // OR
-    // cout << (a ^ b) << endl;  // XOR
-    // cout << (a << 1) << endl; // Left shift
-    // cout << (a >> 1) << endl; // Right shift
+    int a = 8, b = 2;
+    // cout << (a & b) << endl;  //=> AND return 0 or 1 :-  1*1=1, 1*0=0, 0*1=0, 0*0= 0
+
+    // cout << (a | b) << endl;  // => OR return binary :- 1*1=1, 1*0=1, 0*1=1, 0*0= 0
+
+    // cout << (a ^ b) << endl;  // XOR return binary :- 1*1=1, 1*0=0, 0*1=0, 0*0= 1
+
+    // cout << (a << b) << endl; // Left shift
+
+    cout << (a >> 1) << endl; // Right shift
     // cout << (~a) << endl;     // NOT
 
     return 0;
