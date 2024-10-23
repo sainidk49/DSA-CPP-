@@ -66,3 +66,16 @@ alternative :- std::cout<<"hello world"
  **========= A start with 65 and a start with 97 ============**
  A - Z => 65 - 90;
  a => 97 - 122
+
+
+ **========= get unique number ============**
+ using XOR
+ n^n = 0
+ n^other = 1
+
+ like :- int singleNo = nums[0];
+      for (size_t i = 1; i < nums.size(); i++)
+      {
+            singleNo = singleNo ^ nums[i];
+      }
+      return singleNo;

@@ -85,7 +85,7 @@ int main()
 
     // cout << (a | b) << endl;  // => OR return binary :- 1*1=1, 1*0=1, 0*1=1, 0*0= 0
 
-    // cout << (a ^ b) << endl;  // XOR return binary :- 1*1=1, 1*0=0, 0*1=0, 0*0= 1
+    // cout << (a ^ b) << endl;  // XOR return binary :- 1*1=0, 1*0=1, 0*1=1, 0*0= 0
 
     // cout << (a << b) << endl; // Left shift
 
