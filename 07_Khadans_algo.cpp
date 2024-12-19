@@ -46,7 +46,7 @@ int main()
     for (int start = 0; start < n; start++)
     {
         currSum += arr[start];
-        maxSum = max(currSum, maxSum);
+        maxSum = max(currSum, maxSum); 
         if(currSum < 0){
             currSum = 0;
         }

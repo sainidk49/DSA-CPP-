@@ -16,7 +16,6 @@ int main()
         ch++;
         cout << endl;
     }
-
    
 }
 
