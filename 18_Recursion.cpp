@@ -78,55 +78,96 @@ using namespace std;
 
 // == == == == == == check array is shorted or not == == == == == == == ==
 // int checkArray(int size, int arr[]) //// for array
-int checkArray(int size, vector<int> arr) //////// for vector
+// // int checkArray(int size, vector<int> arr) //////// for vector
+// {
+//     if (size == 1)
+//     {
+//         cout << "array is sorted.";
+//         return 0;
+//     }
+
+//     if (arr[size - 1] >= arr[size - 2])
+//     {
+//         return checkArray(size - 1, arr); /// for array
+//         // return checkArray(size - 1, arr); //////// for vector
+//     }
+//     else
+//     {
+//         cout << "array is not sorted.";
+//     }
+// }
+
+// int main()
+// {
+//     // by using array
+//     int number;
+//     cout << "how long your array :: ";
+//     cin >> number;
+//     if (number != 0)
+//     {
+//         int arr[number];
+//         for (size_t i = 0; i < number; i++)
+//         {
+//             cin >> arr[i];
+//         }
+//         int size = sizeof(arr) / sizeof(int);
+//         checkArray(size, arr);
+//     }
+
+//     // // by using vector
+//     // vector<int> arr;
+//     // int number;
+//     // cout << "how long your vector :: ";
+//     // cin >> number;
+//     // if (number != 0)
+//     // {
+//     //     arr.resize(number);
+//     //     cout << "enter your " << number << " vector number :: ";
+//     //     for (size_t i = 0; i < number; i++)
+//     //     {
+//     //         cin >> arr[i];
+//     //     }
+
+//     //     if (arr.size() > 0)
+//     //     {
+//     //         checkArray(number, arr);
+//     //     }
+//     // }
+
+//     return 0;
+// }
+
+// == == == == == == check array is shorted or not == == == == == == == ==
+
+void printSubset(vector<int> &arr, vector<int> &ans, int i)
 {
-    if (size == 1)
+    // cout << "index :: " << i << ", arr.size :: "<< arr.size()<< endl;
+    if (i == arr.size())
     {
-        cout << "array is sorted.";
-        return 0;
+        for (int val : ans)
+        {
+            cout << val << ", ";
+        }
+        cout << endl;
+        return;
     }
 
-    if (arr[size - 1] >= arr[size - 2])
-    {
-        // return checkArray(size - 1, arr); /// for array
-        return checkArray(size - 1, arr); //////// for vector
-    }
-    else
-    {
-        cout << "array is not sorted.";
-    }
+    //// include
+    ans.push_back(arr[i]);
+    printSubset(arr, ans, i + 1);
+
+    
+    //// exclude
+    ans.pop_back();
+    printSubset(arr, ans, i + 1);
+    
 }
 
 int main()
 {
-    // // by using array
-    // int arr[5];
-    // int size = sizeof(arr) / sizeof(int);
-    // cout << "enter number :: ";
-    // for (size_t i = 0; i < 5; i++)
-    // {
-    //     cin >> arr[i];
-    // }
-
-    // by using vector
-    vector<int> arr;
-    int number;
-    cout << "how long your vector :: ";
-    cin >> number;
-    if (number != 0)
-    {
-        arr.resize(number);
-        cout << "enter your " << number << " vector number :: ";
-        for (size_t i = 0; i < number; i++)
-        {
-            cin >> arr[i];
-        }
-
-        if (arr.size() > 0)
-        {
-            checkArray(number, arr);
-        }
-    }
+    vector<int> arr = {1, 2, 3};
+    vector<int> ans;
+    printSubset(arr, ans, 0);
 
     return 0;
 }
