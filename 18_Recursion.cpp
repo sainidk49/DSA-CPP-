@@ -141,7 +141,7 @@ using namespace std;
 
 void printSubset(vector<int> &arr, vector<int> &ans, int i)
 {
-    // cout << "index :: " << i << ", arr.size :: "<< arr.size()<< endl;
+    // cout << "index1 :: " << i << endl;
     if (i == arr.size())
     {
         for (int val : ans)
@@ -152,15 +152,14 @@ void printSubset(vector<int> &arr, vector<int> &ans, int i)
         return;
     }
 
-    //// include
+    //// include /////
     ans.push_back(arr[i]);
+     
     printSubset(arr, ans, i + 1);
-
-    
-    //// exclude
     ans.pop_back();
+    //// exclude
+
     printSubset(arr, ans, i + 1);
-    
 }
 
 int main()
