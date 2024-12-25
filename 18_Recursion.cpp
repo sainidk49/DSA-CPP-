@@ -137,36 +137,100 @@ using namespace std;
 //     return 0;
 // }
 
-// == == == == == == check array is shorted or not == == == == == == == ==
+// == == == == == == subset of array == == == == == == == ==
 
-void printSubset(vector<int> &arr, vector<int> &ans, int i)
+// void printSubset(vector<int> &arr, vector<int> &ans, int i)
+// {
+//     // cout << "index1 :: " << i << endl;
+//     if (i == arr.size())
+//     {
+//         for (int val : ans)
+//         {
+//             cout << val << ", ";
+//         }
+//         cout << endl;
+//         return;
+//     }
+
+//     //// include /////
+//     ans.push_back(arr[i]);
+
+//     printSubset(arr, ans, i + 1);
+
+//     //// exclude
+//     ans.pop_back();
+
+//     printSubset(arr, ans, i + 1);
+// }
+
+// int main()
+// {
+//     vector<int> arr = {1, 2, 3};
+//     vector<int> ans;
+//     printSubset(arr, ans, 0);
+
+//     return 0;
+// }
+
+// == == == == == == subsets of array without duplicate == == == == == == == ==
+// void printSubset(vector<int> &arr, vector<int> &ans, int index)
+// {
+//     if (index == arr.size())
+//     {
+//         for (int val : ans)
+//         {
+//             cout << val << ", ";
+//         }
+//         cout << endl;
+//         return;
+//     }
+
+//     ////// include //////
+//     ans.push_back(arr[index]);
+//     printSubset(arr, ans, index + 1);
+
+//     /////// exclude which is call backtarcking ///
+//     ans.pop_back();
+//     int incIndex = index + 1;
+//     while (incIndex < arr.size() && arr[incIndex] == arr[incIndex - 1])
+//         incIndex++;
+//     printSubset(arr, ans, incIndex);
+// }
+
+// int main()
+// {
+//     vector<int> arr = {1, 2, 3, 3};
+//     vector<int> ans;
+//     printSubset(arr, ans, 0);
+
+//     return 0;
+// }
+
+// == == == == == == permutations  of array == == == == == == == ==
+void permutations(vector<int> &arr, int start)
 {
-    // cout << "index1 :: " << i << endl;
-    if (i == arr.size())
+    if (start == arr.size())
     {
-        for (int val : ans)
+        for (int val : arr)
         {
             cout << val << ", ";
         }
         cout << endl;
         return;
     }
+    for (size_t i = start; i < arr.size(); i++)
+    {
+        swap(arr[start], arr[i]);
 
-    //// include /////
-    ans.push_back(arr[i]);
-     
-    printSubset(arr, ans, i + 1);
-    ans.pop_back();
-    //// exclude
-
-    printSubset(arr, ans, i + 1);
+        permutations(arr, start + 1);
+        swap(arr[start], arr[i]);
+    }
 }
 
 int main()
 {
     vector<int> arr = {1, 2, 3};
-    vector<int> ans;
-    printSubset(arr, ans, 0);
+    permutations(arr, 0);
 
     return 0;
 }
