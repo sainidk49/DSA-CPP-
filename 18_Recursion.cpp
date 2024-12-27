@@ -223,6 +223,8 @@ void permutations(vector<int> &arr, int start)
         swap(arr[start], arr[i]);
 
         permutations(arr, start + 1);
+
+        ////// back tracking ///////
         swap(arr[start], arr[i]);
     }
 }
